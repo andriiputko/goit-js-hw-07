@@ -22,7 +22,7 @@ galleryItems.forEach(element => {
   </li>`)
 })
 
-const instance = basicLightbox.create(`<img src="${galleryItems.original}"><img/>`, {
+const instance = basicLightbox.create(`<div class="gallery__item"><img width="800" heigth="auto" src=""><img/></div>`, {
     onShow: (instance) => {
       window.addEventListener('keydown', onEscKeyPress);
     },
@@ -43,11 +43,4 @@ function onEscKeyPress(e) {
     if (e.code !== 'Escape') return;
     instance.close();
   }
-
-
-
-
-
-
-
 
